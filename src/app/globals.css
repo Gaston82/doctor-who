@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+:root {
+  --main-color: #040521;
+  --text-color: #fff;
+  --bg-button: #ffc67e;
+}
