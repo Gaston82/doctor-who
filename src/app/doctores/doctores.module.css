@@ -1,0 +1,29 @@
+.doctors_container {
+  background-color: #040521;
+  padding: 80px;
+}
+
+.doctors_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  justify-content: center;
+  grid-gap: 32px;
+  margin: 16px;
+}
+
+.card_doctor {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card_button {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 18px;
+  border: none;
+  background-color: lightsalmon;
+  width: 50%;
+}
