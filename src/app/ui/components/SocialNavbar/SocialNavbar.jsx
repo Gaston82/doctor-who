@@ -12,22 +12,32 @@ const SocialNavbar = () => {
       <ul className="flex justify-between">
         <li>
           <Link href={"https://www.facebook.com/DoctorWho/"} target="_blank">
-            <Image src={facebook} alt="facebook logo" height={20} width={20} />
+            <Image
+              src={facebook}
+              alt="Facebook logo"
+              height="auto"
+              width={20}
+            />
           </Link>
         </li>
         <li>
           <Link href={"https://www.facebook.com/DoctorWho/"} target="_blank">
-            <Image src={twitter} alt="facebook logo" height={20} width={20} />
+            <Image src={twitter} alt="Twitter logo" height="auto" width={20} />
           </Link>
         </li>
         <li>
           <Link href={"https://www.facebook.com/DoctorWho/"} target="_blank">
-            <Image src={instagram} alt="facebook logo" height={20} width={20} />
+            <Image
+              src={instagram}
+              alt=" Instagram logo"
+              height="auto"
+              width={20}
+            />
           </Link>
         </li>
         <li>
           <Link href={"https://www.facebook.com/DoctorWho/"} target="_blank">
-            <Image src={tiktok} alt="facebook logo" height={20} width={20} />
+            <Image src={tiktok} alt="Tiktok logo" height="auto" width={20} />
           </Link>
         </li>
       </ul>
