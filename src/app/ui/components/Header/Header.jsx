@@ -9,9 +9,7 @@ const Header = () => {
     <header className="bg-[#040521] text-white h-24 flex justify-between items-center px-16 ">
       <nav className="w-80">
         <ul className="flex justify-between">
-          <li>
-            <a href="http://">Conoce a</a>
-          </li>
+          <Link href={"/conoce"}>Conoce a </Link>
           <Link href={"/doctores"}>Doctores</Link>
           <li>
             <a href="http://">Contacto</a>
