@@ -2,6 +2,7 @@ import React from "react";
 import { doctors } from "../../../public/assets/doctors.json";
 import Image from "next/image";
 import styles from "./doctores.module.css";
+import Link from "next/link";
 
 const Doctores = () => {
   return (
@@ -12,21 +13,23 @@ const Doctores = () => {
           {doctors.map((doctor) => (
             <li key={doctor.id}>
               <article className={styles.card_doctor}>
-                <Image
-                  src={doctor.image}
-                  alt={`${doctor.name}`}
-                  width={320}
-                  height={320}
-                  style={{
-                    maxWidth: "100%",
-                    objectFit: "cover",
-                    maxHeight: "350px",
-                  }}
-                />
-                <h3 className="font-bold text-2xl">{doctor.doctor}</h3>
-                <h4 className="italic">{doctor.actor}</h4>
-                <time>{doctor.screen_time}</time>
-                <button className={styles.card_button}>Ver más</button>
+                  <Image
+                    src={doctor.image}
+                    alt={`${doctor.name}`}
+                    width={320}
+                    height={320}
+                    style={{
+                      maxWidth: "100%",
+                      objectFit: "cover",
+                      maxHeight: "350px",
+                    }}
+                  />
+                  <h3 className="font-bold text-2xl">{doctor.doctor}</h3>
+                  <h4 className="italic">{doctor.actor}</h4>
+                  <time>{doctor.screen_time}</time>
+                    <Link href={`/${doctor.id}`}>
+                  <button className={styles.card_button}>Ver más</button>
+                </Link>
               </article>
             </li>
           ))}
