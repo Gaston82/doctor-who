@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../../../public/assets/img/logos/logo.png";
 import SocialNavbar from "../SocialNavbar/SocialNavbar";
+import Search from "../Search/Search";
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
             <a href="http://">Contacto</a>
           </li>
         </ul>
+        <Search />
       </nav>
       <Image
         className="object-contain "
