@@ -1,16 +1,21 @@
-import React from "react";
-import { doctors } from "../../../public/assets/doctors.json";
 import Image from "next/image";
-import styles from "./doctores.module.css";
 import Link from "next/link";
+import { doctors } from "../../../public/assets/doctors.json";
 
-const Doctores = () => {
+import React from "react";
+import styles from "../doctores/doctores.module.css";
+
+const SearchResults = ({ searchParams }) => {
+  const doctorsFiltered = doctors.filter((doctor) =>
+    doctor.actor.toLowerCase().includes(searchParams.q.toLowerCase())
+  );
+
   return (
     <>
       <section className={styles.doctors_container}>
         <h2 className="text-4xl font-bold text-white">Doctores</h2>
         <ul className={styles.doctors_grid}>
-          {doctors.map((doctor) => (
+          {doctorsFiltered.map((doctor) => (
             <li key={doctor.id}>
               <article className={styles.card_doctor}>
                 <Image
@@ -39,4 +44,4 @@ const Doctores = () => {
   );
 };
 
-export default Doctores;
+export default SearchResults;
